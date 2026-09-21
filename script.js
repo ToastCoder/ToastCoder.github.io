@@ -1,9 +1,11 @@
 const revealElements = document.querySelectorAll('.reveal');
+const navLinks = document.querySelectorAll('.rail-nav a');
 const sections = document.querySelectorAll('main section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
+const progress = document.querySelector('.progress');
+const clock = document.querySelector('[data-clock]');
+const year = document.querySelector('[data-year]');
 const menuToggle = document.querySelector('.menu-toggle');
-const mobileMenu = document.querySelector('.mobile-menu');
-const year = document.querySelector('#year');
+const mobileNav = document.querySelector('.mobile-nav');
 
 if (year) year.textContent = new Date().getFullYear();
 
@@ -23,59 +25,56 @@ revealElements.forEach((element) => {
     else element.classList.add('is-visible');
 });
 
-if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener('click', () => {
-        const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', String(!isOpen));
-        menuToggle.classList.toggle('is-open', !isOpen);
-        mobileMenu.classList.toggle('is-open', !isOpen);
-    });
-
-    mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.classList.remove('is-open');
-        mobileMenu.classList.remove('is-open');
-    }));
-}
-
-const updateScrollProgress = () => {
-    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
-    document.documentElement.style.setProperty('--scroll-progress', `${progress}%`);
+const updateScroll = () => {
+    const height = document.documentElement.scrollHeight - window.innerHeight;
+    if (progress) progress.style.width = `${height > 0 ? (window.scrollY / height) * 100 : 0}%`;
 };
-
-const progressBar = document.createElement('div');
-progressBar.className = 'scroll-progress';
-document.body.appendChild(progressBar);
-window.addEventListener('scroll', updateScrollProgress, { passive: true });
-updateScrollProgress();
+window.addEventListener('scroll', updateScroll, { passive: true });
+updateScroll();
 
 if ('IntersectionObserver' in window && sections.length && navLinks.length) {
-    const activeSectionObserver = new IntersectionObserver((entries) => {
+    const activeObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
             }
         });
     }, { rootMargin: '-35% 0px -55% 0px' });
-    sections.forEach((section) => activeSectionObserver.observe(section));
+    sections.forEach((section) => activeObserver.observe(section));
 }
 
-const glow = document.createElement('div');
-glow.className = 'cursor-glow';
-document.body.appendChild(glow);
-window.addEventListener('pointermove', (event) => {
-    glow.style.left = `${event.clientX}px`;
-    glow.style.top = `${event.clientY}px`;
-});
+if (clock) {
+    const updateClock = () => {
+        clock.textContent = `${new Intl.DateTimeFormat('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: 'Asia/Kolkata' }).format(new Date())} IST`;
+    };
+    updateClock();
+    window.setInterval(updateClock, 1000);
+}
 
-const consoleCard = document.querySelector('.hero-console');
-if (consoleCard && window.matchMedia('(pointer: fine)').matches) {
-    consoleCard.addEventListener('pointermove', (event) => {
-        const rect = consoleCard.getBoundingClientRect();
-        const x = (event.clientX - rect.left) / rect.width - 0.5;
-        const y = (event.clientY - rect.top) / rect.height - 0.5;
-        consoleCard.style.transform = `perspective(700px) rotateX(${y * -5}deg) rotateY(${x * 5}deg) translateY(-4px)`;
+if (menuToggle && mobileNav) {
+    menuToggle.addEventListener('click', () => {
+        const open = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!open));
+        mobileNav.classList.toggle('open', !open);
+        menuToggle.querySelector('span').textContent = open ? '＋' : '－';
     });
-    consoleCard.addEventListener('pointerleave', () => { consoleCard.style.transform = ''; });
+    mobileNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.remove('open');
+        menuToggle.querySelector('span').textContent = '＋';
+    }));
 }
+
+const projectCards = document.querySelectorAll('.project-row');
+document.querySelectorAll('.filter').forEach((filter) => filter.addEventListener('click', () => {
+    const category = filter.dataset.filter;
+    document.querySelectorAll('.filter').forEach((button) => button.classList.toggle('active', button === filter));
+    projectCards.forEach((card) => {
+        const visible = category === 'all' || card.dataset.category === category;
+        card.classList.toggle('is-hidden', !visible);
+        if (visible) {
+            card.classList.remove('is-visible');
+            window.requestAnimationFrame(() => card.classList.add('is-visible'));
+        }
+    });
+}));

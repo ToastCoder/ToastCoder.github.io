@@ -1,76 +1,68 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Vigneshwar KR - AI/ML Engineer specializing in Generative AI, Agentic AI, and RAG systems.">
-        <meta name="theme-color" content="#0b0f14">
-        <title>Vigneshwar KR | AI/ML Engineer</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        <script defer src="script.js"></script>
-    </head>
-    <body>
-        <div class="site-shell">
-            <header class="topbar">
-                <a class="brand" href="#top" aria-label="Vigneshwar KR home"><span class="brand-mark">VK</span><span>Vigneshwar KR</span></a>
-                <nav class="nav-links" aria-label="Primary navigation"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
-                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span><b>Menu</b></button>
-                <a class="availability" href="mailto:hellovigkr@gmail.com"><span class="status-dot"></span>Say hello</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio and engineering notes by Vigneshwar KR, AI/ML Engineer.">
+    <title>Vigneshwar KR / Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="progress"></div>
+    <div class="page-frame">
+        <aside class="profile-rail">
+            <div class="rail-top"><span class="monogram">VK</span><span class="rail-label">PORTFOLIO / 2026</span></div>
+            <div class="profile-block">
+                <p class="rail-kicker">Hello, I’m</p>
+                <h1>Vigneshwar<br>KR</h1>
+                <p class="role">AI/ML Engineer<br>Data Scientist</p>
+                <p class="bio">I build Generative AI, Agentic AI, and RAG systems for turning unstructured information into dependable software.</p>
+            </div>
+            <nav class="rail-nav" aria-label="Portfolio navigation">
+                <a class="active" href="#work"><span>01</span>Selected work</a>
+                <a href="#experience"><span>02</span>Experience</a>
+                <a href="#toolkit"><span>03</span>Toolkit</a>
+                <a href="#contact"><span>04</span>Contact</a>
+            </nav>
+            <div class="rail-bottom"><span class="live-dot"></span><span>Available for good problems</span><a href="mailto:hellovigkr@gmail.com">hellovigkr@gmail.com ↗</a></div>
+        </aside>
+
+        <main class="portfolio-content">
+            <header class="content-header">
+                <div><span class="section-index">01</span><span class="header-title">WORK INDEX</span></div>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu <span>＋</span></button>
+                <div class="header-meta"><span>Based in Bengaluru, India</span><span class="clock" data-clock>--:--:-- IST</span></div>
             </header>
-            <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+            <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation"><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#toolkit">Toolkit</a><a href="#contact">Contact</a></nav>
 
-            <main id="top">
-                <section class="hero section-grid" aria-labelledby="hero-title">
-                    <div class="hero-copy reveal">
-                        <p class="eyebrow"><span class="prompt">&gt;</span> PORTFOLIO / AI/ML ENGINEER</p>
-                        <h1 id="hero-title">Vigneshwar KR<br><span>AI/ML Engineer.</span></h1>
-                        <p class="hero-summary">A collection of production work, experiments, and systems built with Python, LangGraph, RAG, and Azure. Currently a Package Specialist - Data Scientist, Artificial Intelligence at IBM.</p>
-                        <div class="hero-actions"><a class="button button-primary" href="#projects">View selected work <span aria-hidden="true">↘</span></a><a class="button button-quiet" href="https://github.com/ToastCoder" target="_blank" rel="noreferrer">GitHub profile <span aria-hidden="true">↗</span></a></div>
-                    </div>
-                    <div class="hero-console reveal reveal-delay" aria-label="Current focus">
-                        <div class="console-bar"><span></span><span></span><span></span><code>~/vigneshwar</code></div>
-                        <div class="console-body">
-                            <p><span class="syntax-purple">const</span> portfolio = {</p>
-                            <p class="indent"><span class="syntax-blue">focus</span>: <span class="syntax-green">"Generative AI"</span>,</p>
-                            <p class="indent"><span class="syntax-blue">projects</span>: <span class="syntax-green">4</span>,</p>
-                            <p class="indent"><span class="syntax-blue">stack</span>: [<span class="syntax-green">"Python"</span>, <span class="syntax-green">"LangGraph"</span>, <span class="syntax-green">"Azure"</span>]</p>
-                            <p>};<span class="cursor" aria-hidden="true"></span></p>
-                        </div>
-                    </div>
-                </section>
+            <section id="work" class="work-section" aria-labelledby="work-title">
+                <div class="intro-row reveal"><div><p class="eyebrow">PROJECT ARCHIVE</p><h2 id="work-title">Selected<br><em>work</em></h2></div><p class="intro-note">A working record of AI applications, local-first tools, and experiments across document intelligence, agents, and retrieval.</p></div>
+                <div class="filter-bar" aria-label="Filter projects"><span>FILTER BY</span><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="rag">RAG</button><button class="filter" data-filter="agents">Agents</button><button class="filter" data-filter="local">Local AI</button></div>
+                <div class="project-list">
+                    <article class="project-row reveal" data-category="rag"><div class="project-number">01</div><div class="project-main"><div class="project-heading"><h3>HRBuddy</h3><span>AI / RAG</span></div><p>HR knowledge-retrieval application that chunks a 64-page policy document into approximately 150 semantic chunks and returns grounded answers to natural language queries.</p><div class="tags"><span>Python</span><span>RAG</span><span>Embeddings</span></div></div><a class="project-link" href="https://github.com/ToastCoder/HRBuddy" target="_blank" rel="noreferrer" aria-label="View HRBuddy on GitHub">↗</a></article>
+                    <article class="project-row reveal" data-category="local"><div class="project-number">02</div><div class="project-main"><div class="project-heading"><h3>OpenCortex</h3><span>LOCAL-FIRST</span></div><p>Private document intelligence platform running Gemma 4B on-device for secure, cloud-free compute, embeddings, and prompt execution without cloud dependencies.</p><div class="tags"><span>Local AI</span><span>Documents</span><span>Gemma 4B</span></div></div><a class="project-link" href="https://github.com/ToastCoder/OpenCortex" target="_blank" rel="noreferrer" aria-label="View OpenCortex on GitHub">↗</a></article>
+                    <article class="project-row reveal" data-category="agents"><div class="project-number">03</div><div class="project-main"><div class="project-heading"><h3>shell-agent</h3><span>AGENTS</span></div><p>Autonomous terminal AI agent built with Python and LangGraph that auto-executes safe commands and uses configurable guardrails for higher-risk operations.</p><div class="tags"><span>Python</span><span>LangGraph</span><span>Guardrails</span></div></div><a class="project-link" href="https://github.com/ToastCoder/shell-agent" target="_blank" rel="noreferrer" aria-label="View shell-agent on GitHub">↗</a></article>
+                    <article class="project-row reveal" data-category="rag"><div class="project-number">04</div><div class="project-main"><div class="project-heading"><h3>AnalyzeMyCV</h3><span>ANALYTICS</span></div><p>AI-powered resume analytics application using Streamlit and a carefully prompted Azure OpenAI model, deployed on Azure App Service.</p><div class="tags"><span>Streamlit</span><span>Azure OpenAI</span><span>Deployed</span></div></div><span class="project-link muted-link">—</span></article>
+                </div>
+            </section>
 
-                <section id="experience" class="content-section" aria-labelledby="experience-title">
-                    <div class="section-heading reveal"><p class="eyebrow">02 / EXPERIENCE</p><h2 id="experience-title">Professional<br><span>experience.</span></h2></div>
-                    <div class="timeline">
-                        <article class="timeline-item reveal"><div class="timeline-meta"><span>JUN 2023 - PRESENT</span><span>BENGALURU, INDIA</span></div><div class="timeline-content"><h3>Package Specialist - Data Scientist, Artificial Intelligence</h3><p class="company">IBM</p><ul><li>Automated client invoice digitization with an NLP and OCR pipeline that converts unstructured invoices into structured data.</li><li>Took a RAG pipeline from prototype to production using ChromaDB, hybrid retrieval, and cross-encoder reranking.</li><li>Refactored invoice parsing into an agentic workflow where the LLM interprets context and calls tools as needed.</li></ul></div></article>
-                        <article class="timeline-item reveal"><div class="timeline-meta"><span>SEP 2022 - DEC 2022</span><span>TIRUCHIRAPPALLI</span></div><div class="timeline-content"><h3>Data Science Intern</h3><p class="company">augurai</p><p>Applied computer vision and audio classification models with image processing pipelines for industrial inspection and defect detection.</p></div></article>
-                        <article class="timeline-item reveal"><div class="timeline-meta"><span>JUN 2020 - JUL 2020</span><span>TIRUCHIRAPPALLI</span></div><div class="timeline-content"><h3>Data Science Intern</h3><p class="company">CourseBricks</p><p>Processed unstructured data pipelines with Pandas and implemented computer vision and text extraction workflows with OpenCV and Pytesseract-OCR.</p></div></article>
-                    </div>
-                </section>
+            <section id="experience" class="record-section reveal" aria-labelledby="experience-title">
+                <div class="section-label"><span class="section-index">02</span><span>CAREER RECORD</span></div>
+                <div class="record-content"><h2 id="experience-title">Experience</h2><div class="record-item"><div class="record-date">06.2023 — NOW<br><small>BENGALURU</small></div><div><h3>IBM <span>／ Package Specialist - Data Scientist, Artificial Intelligence</span></h3><p>Automated invoice digitization with NLP and OCR. Took a RAG pipeline from prototype to production using ChromaDB, hybrid retrieval, and cross-encoder reranking. Refactored invoice parsing into an agentic workflow with tool calling, model evaluation, and prompt engineering.</p></div></div><div class="record-item"><div class="record-date">09.2022 — 12.2022<br><small>TIRUCHIRAPPALLI</small></div><div><h3>augurai <span>／ Data Science Intern</span></h3><p>Applied computer vision and audio classification models with image processing pipelines for industrial inspection and defect detection.</p></div></div><div class="record-item"><div class="record-date">06.2020 — 07.2020<br><small>TIRUCHIRAPPALLI</small></div><div><h3>CourseBricks <span>／ Data Science Intern</span></h3><p>Processed unstructured data pipelines with Pandas and implemented computer vision and text extraction workflows with OpenCV and Pytesseract-OCR.</p></div></div></div>
+            </section>
 
-                <section id="projects" class="content-section projects-section" aria-labelledby="projects-title">
-                    <div class="section-heading reveal"><p class="eyebrow">01 / SELECTED WORK</p><h2 id="projects-title">Projects &amp;<br><span>experiments.</span></h2></div>
-                    <div class="project-grid">
-                        <article class="project-card featured reveal"><div class="project-topline"><span>01</span><span>AI / RAG</span></div><h3>HRBuddy</h3><p>An HR knowledge-retrieval RAG application that chunks a 64-page HR policy document into approximately 150 semantic chunks and returns grounded answers to natural language queries.</p><div class="project-footer"><span>Python · RAG · Embeddings</span><a href="https://github.com/ToastCoder/HRBuddy" target="_blank" rel="noreferrer">View on GitHub ↗</a></div></article>
-                        <article class="project-card reveal"><div class="project-topline"><span>02</span><span>LOCAL-FIRST</span></div><h3>OpenCortex</h3><p>A private, local-first document intelligence platform running Gemma 4B on-device for secure, cloud-free compute, embeddings, and prompt execution.</p><div class="project-footer"><span>Local AI · Documents</span><a href="https://github.com/ToastCoder/OpenCortex" target="_blank" rel="noreferrer">View on GitHub ↗</a></div></article>
-                        <article class="project-card reveal"><div class="project-topline"><span>03</span><span>AGENTS</span></div><h3>shell-agent</h3><p>An autonomous terminal AI agent built with Python and LangGraph that auto-executes safe commands and uses configurable guardrails for higher-risk operations.</p><div class="project-footer"><span>Python · LangGraph</span><a href="https://github.com/ToastCoder/shell-agent" target="_blank" rel="noreferrer">View on GitHub ↗</a></div></article>
-                        <article class="project-card reveal"><div class="project-topline"><span>04</span><span>ANALYTICS</span></div><h3>AnalyzeMyCV</h3><p>An AI-powered resume analytics application using Streamlit and a carefully prompted Azure OpenAI model, deployed on Azure App Service.</p><div class="project-footer"><span>Streamlit · Azure OpenAI</span><span class="project-note">Deployed on Azure</span></div></article>
-                    </div>
-                </section>
+            <section id="toolkit" class="toolkit-section reveal" aria-labelledby="toolkit-title">
+                <div class="section-label"><span class="section-index">03</span><span>TOOLS I USE</span></div>
+                <div class="toolkit-content"><h2 id="toolkit-title">Toolkit</h2><div class="toolkit-columns"><div><h3>AI / ML</h3><p>Generative AI, LLMs, RAG, Agentic AI, Tool Calling, Prompt Engineering, Transformer Models, ChromaDB, NLP, OCR, Computer Vision.</p></div><div><h3>BUILD</h3><p>Python, LangGraph, LangChain, PyTorch, TensorFlow, Keras, OpenCV, Pytesseract-OCR, Pandas, NumPy, Streamlit.</p></div><div><h3>SHIP</h3><p>Microsoft Azure, Azure OpenAI Service, Azure App Service, Docker.</p></div></div><div class="credentials"><span>B.E. Electronics and Communication Engineering / Rajalakshmi Engineering College / 2022</span><span>Claude Certified Developer - Foundations / CCDV-F</span><span>Azure AI Fundamentals / AI-900</span></div></div>
+            </section>
 
-                <section class="toolkit-section content-section" aria-labelledby="toolkit-title">
-                    <div class="section-heading reveal"><p class="eyebrow">03 / TOOLKIT</p><h2 id="toolkit-title">Technical<br><span>toolkit.</span></h2></div>
-                    <div class="toolkit-grid reveal"><div><h3>AI &amp; Agentic Systems</h3><p>Generative AI · LLMs · RAG · Agentic AI · Tool Calling · Prompt Engineering · Transformer Models · ChromaDB</p></div><div><h3>Languages &amp; Frameworks</h3><p>Python · LangGraph · LangChain · PyTorch · TensorFlow · Keras · OpenCV · Pandas · NumPy · Streamlit</p></div><div><h3>Cloud &amp; Delivery</h3><p>Microsoft Azure · Azure OpenAI Service · Azure App Service · Docker</p></div><div><h3>Document Intelligence</h3><p>NLP · OCR · Pytesseract-OCR · Document Parsing · Text Extraction · Computer Vision</p></div></div>
-                </section>
-
-                <section class="credentials section-grid"><div class="credential-block reveal"><p class="eyebrow">EDUCATION</p><h3>Rajalakshmi Engineering College</h3><p>B.E. Electronics and Communication Engineering<br><span>Chennai, India · 2022</span></p></div><div class="credential-block reveal"><p class="eyebrow">CERTIFICATIONS</p><h3>Claude Certified Developer - Foundations</h3><p>Anthropic · CCDV-F</p><h3>Azure AI Fundamentals</h3><p>Microsoft Learn · AI-900</p></div></section>
-
-                <section id="contact" class="contact-section reveal" aria-labelledby="contact-title"><p class="eyebrow">05 / CONTACT</p><h2 id="contact-title">Let’s connect.</h2><a class="contact-email" href="mailto:hellovigkr@gmail.com">hellovigkr@gmail.com <span>↗</span></a><div class="contact-links"><a href="https://www.linkedin.com/in/toastcoder" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/ToastCoder" target="_blank" rel="noreferrer">GitHub ↗</a><a href="tel:+919629020147">+91 9629020147</a></div></section>
-            </main>
-            <footer class="footer"><span>© <span id="year">2026</span> Vigneshwar KR</span><span>Designed &amp; built with intent.</span></footer>
-        </div>
-    </body>
+            <section id="contact" class="contact-section reveal" aria-labelledby="contact-title"><div class="section-label"><span class="section-index">04</span><span>CONTACT</span></div><div class="contact-content"><h2 id="contact-title">Let’s make<br><em>something useful.</em></h2><a class="email" href="mailto:hellovigkr@gmail.com">hellovigkr@gmail.com ↗</a><div class="socials"><a href="https://www.linkedin.com/in/toastcoder" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/ToastCoder" target="_blank" rel="noreferrer">GitHub ↗</a><a href="tel:+919629020147">+91 9629020147</a></div></div></section>
+            <footer><span>VIGNESHWAR KR / PORTFOLIO</span><span>© <span data-year>2026</span></span></footer>
+        </main>
+    </div>
+</body>
 </html>
